@@ -1,0 +1,44 @@
+.hero {
+    min-height: 100vh;
+    background: url("/images/tafelrunde-bg.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 3rem;
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+
+        span {
+            color: #e2b76d;
+        }
+    }
+
+    p {
+        max-width: 600px;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .ctaButton {
+        background-color: #b48a4e;
+        padding: 0.8rem 2rem;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: white;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background-color: #96743f;
+            transform: translateY(-2px);
+        }
+    }
+}
