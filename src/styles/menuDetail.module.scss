@@ -1,0 +1,97 @@
+.container {
+    background-color: #faf8f4;
+    min-height: 100vh;
+    padding: 3rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .content {
+        padding: 2rem;
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .description {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .portions {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+            color: black;
+
+            label {
+                font-weight: 600;
+                color: #333;
+            }
+
+            input {
+                width: 80px;
+                padding: 0.4rem;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                text-align: center;
+            }
+        }
+
+        .price {
+            font-size: 1.1rem;
+            color: #b48a4e;
+            margin-bottom: 1.8rem;
+        }
+
+        .button {
+            background-color: #b48a4e;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+
+            &:hover {
+                background-color: #96743f;
+                transform: translateY(-2px);
+            }
+        }
+
+        .backButton {
+            background: none;
+            color: #666;
+            margin-top: 1.5rem;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            text-decoration: underline;
+
+            &:hover {
+                color: #333;
+            }
+        }
+    }
+}
