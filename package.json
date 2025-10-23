@@ -6,7 +6,9 @@
     "dev": "next dev --webpack",
     "build": "next build --webpack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "export": "next export",
+    "deploy": "npm run build && echo > out/.nojekyll && git add out && git commit -m \"Export static site\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
     "next": "16.0.0",
