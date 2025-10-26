@@ -15,7 +15,7 @@ export default function MenuCard({menu}: Props) {
                 <h2>{menu.title}</h2>
                 <p>{menu.description}</p>
                 <p className={styles.price}>
-                    {menu.pricePerPerson.toFixed(2)} € / Person
+                    {menu.basePricePerPerson.toFixed(2)} € / Person
                 </p>
                 <Link href={`/menus/${menu.id}`}>Details ansehen</Link>
             </div>
