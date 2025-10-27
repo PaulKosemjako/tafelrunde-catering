@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Layout from "@/components/Layout";
 import styles from "@/styles/MenuDetail.module.scss";
 import { useCart } from "@/context/CartContext";
+import toast from "react-hot-toast";
 
 interface MenuDetailProps {
   menu: Menu;
@@ -142,11 +143,32 @@ export default function MenuDetailPage({ menu }: MenuDetailProps) {
                         ).join("\n")
                       : "Keine Extras ausgewählt";
                   
-                  alert(`"${menu.title}" wurde zum Warenkorb hinzugefügt!\n\n` +
-                    `Personen: ${menuPortions}\n\n` +
-                    `Extras: \n${extrasText}\n\n` +
-                    `Gesamtpreis: ${totalPrice.toFixed(2)} €`
-                  );
+                  toast.custom((t) => (
+                    <div
+                      style={{
+                        background: "#333",
+                        color: "white",
+                        padding: "14px 18px",
+                        borderRadius: "10px",
+                        boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
+                        fontSize: "0.95rem",
+                        whiteSpace: "pre-line",
+                        maxWidth: "340px",
+                      }}
+                    >
+                      <strong>🛒 {menu.title}</strong> wurde hinzugefügt!
+                      <br />
+                      👥 <b>{menuPortions}</b> Personen
+                      <br />
+                      <br />
+                      🍽️ <u>Extras:</u>
+                      <br />
+                      {extrasText}
+                      <br />
+                      <br />
+                      💶 Gesamtpreis: <b>{totalPrice.toFixed(2)} €</b>
+                    </div>
+                    ));
               }}>
                 🛒 In den Warenkorb
             </button>
